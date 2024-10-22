@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles Page</title>
+    <link rel="stylesheet" href="../css/artindex.css">
+    <link rel="stylesheet" href="../css/typography.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About Me</a></li>
+                <li><a href="../articles/index.html">Articles</a></li>
+                <li><a href="../services.html">Services</a></li>
+                <li><a href="../contact.html">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 主内容区域 -->
+    <div class="content-wrapper">
+        <!-- 左侧内容 -->
+        <div class="main-content">
+            <div class="tophead">
+                这是顶部的介绍
+            </div>
+            <div class="previous-arc">
+                <div class="grid-arc">
+                    <article>
+                        <div class="arctitle"></div>
+                        <div class="arcontent">
+                        </div>
+                        <div class="read-more">阅读更多</div>
+                    </article>
+                    <article>
+                        This is the second arc
+                    </article>
+                </div>
+
+                
+                <div class="grid-arc">
+                    <article>
+                        this is the right arc
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <!-- 右侧栏 -->
+        <aside class="sidebar" >
+            <div class="sidebarcontent" id="sidebarcont">
+                <h3>BROWSE BY CATEGORY</h3>
+                <a href="poetry/poetry.html">诗歌</a>
+                <a href="blogs/index.html">文章</a>
+                <a href="math/index.html">数学</a>
+                <a href="technology/index.html">技术</a>
+                <a href="editart.html">编辑文章</a>
+            </div>
+            <script>
+                // 获取 sidebar 元素
+                const sidebar = document.getElementById('sidebarcont');
+              
+                // 获取 sidebar 距离页面顶部的初始距离
+                const offsetTop = sidebar.offsetTop;
+              
+                // 监听页面滚动事件
+                window.addEventListener('scroll', function() {
+                  // 如果页面滚动超过 sidebar 的初始位置，则添加 'fixed' 类
+                  if (window.pageYOffset >= offsetTop) {
+                    sidebar.classList.add('fixed');
+                  } else {
+                    // 否则移除 'fixed' 类
+                    sidebar.classList.remove('fixed');
+                  }
+                });
+              </script>
+        </aside>
+    </div>
+</body>
+</html>
